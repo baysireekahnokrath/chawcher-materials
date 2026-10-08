@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ASE Bespoke Furniture</title>
+<meta name="description" content="ASE รับงานสั่งผลิตเฟอร์นิเจอร์ตามแบบสำหรับโครงการโรงแรม ร้านอาหาร ที่พักอาศัย และพื้นที่ commercial">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Noto+Sans+Thai:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  /* All styles are scoped to .ase-mk so the block can be pasted into another page */
+  body { margin: 0; background: #fff; }
+  .ase-mk { --ink: #1a1a1a; --muted: #555; --line: #d9d9d9;
+    font-family: "Noto Sans Thai", "Montserrat", sans-serif; color: var(--ink);
+    font-weight: 300; line-height: 1.75; font-size: 15px; -webkit-font-smoothing: antialiased; }
+  .ase-mk *, .ase-mk *::before, .ase-mk *::after { box-sizing: border-box; }
+  .ase-mk img { display: block; max-width: 100%; }
+  .ase-mk .wrap { max-width: 960px; margin: 0 auto; padding: 0 20px; }
+  .ase-mk .narrow { max-width: 840px; }
+
+  /* Hero */
+  .ase-mk .hero { position: relative; height: clamp(260px, 44vw, 520px); color: #fff;
+    background: #444 center / cover no-repeat; display: flex; align-items: flex-end; justify-content: center; }
+  .ase-mk .hero::before { content: ""; position: absolute; inset: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,.05) 40%, rgba(0,0,0,.55)); }
+  .ase-mk .hero h1 { position: relative; margin: 0 20px clamp(28px, 5vw, 56px);
+    font-family: "Montserrat", sans-serif; font-weight: 700; letter-spacing: .03em;
+    font-size: clamp(30px, 5vw, 52px); text-align: center; }
+  .ase-mk hr { border: 0; border-top: 1px solid var(--line); margin: 28px auto; max-width: 880px; }
+  .ase-mk .intro { text-align: center; margin: 0 auto; }
+
+  /* Projects */
+  .ase-mk .projects { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 64px; }
+  .ase-mk .projects figure { margin: 0; }
+  .ase-mk .projects img { width: 100%; aspect-ratio: 3 / 4.2; object-fit: cover; }
+  .ase-mk .projects figcaption { text-align: center; margin-top: 14px; font-family: "Montserrat", sans-serif;
+    font-size: 13px; letter-spacing: .04em; line-height: 1.5; text-transform: uppercase; }
+
+  /* Scope */
+  .ase-mk .scope { margin-top: 72px; }
+  .ase-mk .scope h2 { font-size: 15px; font-weight: 500; margin: 0; }
+  .ase-mk .scope ul { margin: 2px 0 6px; padding-left: 22px; }
+  .ase-mk .scope p { margin: 0; }
+
+  /* Process gallery */
+  .ase-mk .process { max-width: 700px; margin: 56px auto 0; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .ase-mk .process img { width: 100%; height: 100%; object-fit: cover; aspect-ratio: 1 / 0.85; }
+  .ase-mk .process .wide { grid-column: 1 / -1; }
+  .ase-mk .process .wide img { aspect-ratio: 16 / 7; }
+
+  /* Feature project */
+  .ase-mk .feature { margin-top: 96px; display: grid; grid-template-columns: 1fr 260px; gap: 14px 20px; }
+  .ase-mk .feature .main { margin: 0; }
+  .ase-mk .feature .main img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+  .ase-mk .feature .side { display: flex; flex-direction: column; justify-content: space-between;
+    font-size: 12px; line-height: 1.7; }
+  .ase-mk .feature .side h3 { margin: 0; font-family: "Montserrat", sans-serif; font-size: 12px;
+    font-weight: 500; letter-spacing: .04em; text-transform: uppercase; line-height: 1.5; }
+  .ase-mk .feature .side p { margin: 0; }
+  .ase-mk .thumbs { grid-column: 1; position: relative; display: flex; align-items: center; gap: 8px; }
+  .ase-mk .thumbs .track { flex: 1; display: flex; gap: 8px; overflow-x: auto; scroll-snap-type: x mandatory;
+    scrollbar-width: none; }
+  .ase-mk .thumbs .track::-webkit-scrollbar { display: none; }
+  .ase-mk .thumbs .track img { flex: 0 0 calc((100% - 16px) / 3); min-width: 0; width: calc((100% - 16px) / 3); aspect-ratio: 16 / 10; object-fit: cover;
+    scroll-snap-align: start; }
+  .ase-mk .thumbs button { background: none; border: 0; padding: 4px; cursor: pointer; font-size: 18px;
+    color: var(--muted); line-height: 1; }
+
+  .ase-mk .end { height: 80px; }
+
+  @media (max-width: 700px) {
+    .ase-mk { font-size: 14px; }
+    .ase-mk .intro { text-align: left; }
+    .ase-mk .projects { grid-template-columns: 1fr; gap: 28px; }
+    .ase-mk .projects img { aspect-ratio: 4 / 3; }
+    .ase-mk .feature { grid-template-columns: 1fr; }
+    .ase-mk .feature .side { gap: 12px; }
+    .ase-mk .thumbs .track img { flex-basis: calc((100% - 8px) / 2); width: calc((100% - 8px) / 2); }
+  }
+</style>
+</head>
+<body>
+<div class="ase-mk">
+
+  <section class="hero" style="background-image:url('img/hero.jpg')">
+    <h1>BESPOKE FURNITURE</h1>
+  </section>
+
+  <div class="wrap narrow">
+    <hr>
+    <p class="intro">นอกจากสินค้าแบรนด์ตัวเอง ASE รับงานสั่งผลิตตามแบบสำหรับโครงการโดยเฉพาะ ตั้งแต่การปรับขนาดและวัสดุจากรุ่นที่มีอยู่ ไปจนถึงขึ้นแบบใหม่ทั้งชิ้นจากแบบของสถาปนิกหรือนักออกแบบภายใน</p>
+  </div>
+
+  <!-- ===== Projects ===== -->
+  <div class="wrap">
+    <div class="projects">
+      <figure>
+        <img src="img/maison-mystique.jpg" alt="Maison Mystique, Khao Yai" loading="lazy">
+        <figcaption>Maison Mystique<br>Khao Yai, Thailand</figcaption>
+      </figure>
+      <figure>
+        <img src="img/curio-kenya.jpg" alt="Curio Collection by Hilton, Kenya" loading="lazy">
+        <figcaption>Curio Collection by Hilton<br>Kenya</figcaption>
+      </figure>
+      <figure>
+        <img src="img/savelburg.jpg" alt="Savelburg Restaurant, Bangkok" loading="lazy">
+        <figcaption>Savelburg Restaurant<br>Bangkok, Thailand</figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <!-- ===== Scope of work ===== -->
+  <section class="wrap narrow scope">
+    <h2>ขอบเขตงานที่รับ</h2>
+    <ul>
+      <li>โซฟา อาร์มแชร์ เบาะนั่ง หัวเตียง และงานบุนวมตามแบบ</li>
+      <li>ปรับขนาด สัดส่วน และความแน่นเบาะ ให้เข้ากับผังพื้นที่จริง</li>
+      <li>เลือกและจัดหาวัสดุหุ้ม รวมถึงผ้าและหนังเฉพาะที่โครงการกำหนด</li>
+      <li>งานไม้ประกอบร่วม เช่น ชั้นวาง ตู้ และเคาน์เตอร์</li>
+      <li>ผลิตซ้ำเป็นชุดสำหรับห้องพักจำนวนมาก โดยคุมสเปกให้เหมือนกันทุกห้อง</li>
+    </ul>
+    <p>เหมาะกับ โรงแรมและรีสอร์ต ร้านอาหารและคาเฟ่ โครงการที่พักอาศัย ออฟฟิศ โรงพยาบาล และพื้นที่ commercial ที่ต้องการเฟอร์นิเจอร์เฉพาะตัว</p>
+  </section>
+
+  <!-- ===== Process ===== -->
+  <div class="wrap">
+    <div class="process">
+      <div class="wide"><img src="img/process-1.jpg" alt="ขึ้นแบบและทำแพทเทิร์น" loading="lazy"></div>
+      <div><img src="img/process-2.jpg" alt="คัดและจัดวางหนัง" loading="lazy"></div>
+      <div><img src="img/process-3.jpg" alt="ตัดหนังตามแพทเทิร์น" loading="lazy"></div>
+    </div>
+  </div>
+
+  <!-- ===== Feature project ===== -->
+  <section class="wrap feature">
+    <figure class="main"><img src="img/maison-mystique.jpg" alt="Maison Mystique dining room" loading="lazy"></figure>
+    <div class="side">
+      <h3>Maison Mystique<br>Khao Yai, Thailand</h3>
+      <p>ภายในพื้นที่กว่า 40 ไร่ของ Maison Mystique ทุกห้องมีธีม มีเรื่องราว มีอารมณ์เฉพาะตัว เราออกแบบและผลิตเฟอร์นิเจอร์ให้สอดรับกับบรรยากาศของแต่ละห้อง โดยไม่ดึงความสนใจจากสิ่งรอบข้าง แต่ช่วยเติมเต็ม "สิ่งที่ห้องนั้นต้องการสื่อ"</p>
+    </div>
+    <div class="thumbs">
+      <button type="button" aria-label="Previous" onclick="this.nextElementSibling.scrollBy({left:-this.nextElementSibling.clientWidth,behavior:'smooth'})">&#8249;</button>
+      <div class="track">
+        <img src="img/mm-1.jpg" alt="Maison Mystique library" loading="lazy">
+        <img src="img/mm-2.jpg" alt="Maison Mystique lounge" loading="lazy">
+        <img src="img/mm-3.jpg" alt="Maison Mystique bedroom" loading="lazy">
+        <img src="img/mm-4.jpg" alt="Maison Mystique sitting area" loading="lazy">
+        <img src="img/mm-5.jpg" alt="Maison Mystique cigar room" loading="lazy">
+        <img src="img/mm-6.jpg" alt="Maison Mystique bar" loading="lazy">
+        <img src="img/mm-7.jpg" alt="Maison Mystique tea corner" loading="lazy">
+      </div>
+      <button type="button" aria-label="Next" onclick="this.previousElementSibling.scrollBy({left:this.previousElementSibling.clientWidth,behavior:'smooth'})">&#8250;</button>
+    </div>
+  </section>
+
+  <div class="end"></div>
+</div>
+</body>
+</html>

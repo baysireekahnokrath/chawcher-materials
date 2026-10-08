@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ASE Furnishings</title>
+<meta name="description" content="ASE ผู้พัฒนาและผลิตเฟอร์นิเจอร์สัญชาติไทย เชี่ยวชาญงานหุ้มบุ (Upholstery) และงานสั่งผลิต">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Noto+Sans+Thai:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  /* All styles are scoped to .ase-mk so the block can be pasted into another page */
+  body { margin: 0; background: #fff; }
+  .ase-mk { --ink: #1a1a1a; --muted: #555; --line: #d9d9d9; --accent: #c0392b;
+    font-family: "Noto Sans Thai", "Montserrat", sans-serif; color: var(--ink);
+    font-weight: 300; line-height: 1.75; font-size: 15px; -webkit-font-smoothing: antialiased; }
+  .ase-mk *, .ase-mk *::before, .ase-mk *::after { box-sizing: border-box; }
+  .ase-mk img { display: block; max-width: 100%; }
+  .ase-mk a { color: inherit; }
+  .ase-mk .wrap { max-width: 960px; margin: 0 auto; padding: 0 20px; }
+
+  /* Header */
+  .ase-mk .hero { height: clamp(220px, 34vw, 420px); background: #ddd center 60% / cover no-repeat; }
+  .ase-mk .brand { text-align: center; margin-top: -64px; }
+  .ase-mk .logo { width: 128px; height: 128px; border-radius: 50%; margin: 0 auto; overflow: hidden;
+    border: 4px solid #fff; box-shadow: 0 2px 10px rgba(0,0,0,.12); background: #3d3d3d; }
+  .ase-mk .logo img { width: 100%; height: 100%; object-fit: cover; }
+  .ase-mk .brand h1 { font-family: "Montserrat", sans-serif; font-weight: 700; font-size: 34px;
+    letter-spacing: .02em; margin: 14px 0 6px; }
+  .ase-mk .meta { display: flex; align-items: center; justify-content: center; gap: 12px;
+    font-family: "Montserrat", sans-serif; font-size: 12px; font-weight: 600; letter-spacing: .08em; }
+  .ase-mk .meta .sep { width: 1px; height: 14px; background: var(--ink); }
+  .ase-mk .social { display: flex; gap: 10px; }
+  .ase-mk .social a { display: inline-flex; width: 16px; height: 16px; }
+  .ase-mk .social svg { width: 16px; height: 16px; }
+  .ase-mk .loc { display: flex; align-items: center; justify-content: center; gap: 4px;
+    font-family: "Montserrat", sans-serif; font-size: 11px; color: var(--muted); margin-top: 10px; }
+  .ase-mk .loc svg { width: 13px; height: 13px; color: var(--accent); }
+  .ase-mk .loc b { color: var(--accent); font-weight: 500; }
+  .ase-mk hr { border: 0; border-top: 1px solid var(--line); margin: 36px auto; max-width: 920px; }
+
+  /* About */
+  .ase-mk h2 { font-family: "Montserrat", sans-serif; font-weight: 600; font-size: 20px;
+    letter-spacing: .06em; text-align: center; margin: 0 0 18px; }
+  .ase-mk .about p { text-align: center; max-width: 820px; margin: 0 auto 28px; }
+  .ase-mk .about figure { margin: 0 0 22px; }
+  .ase-mk .about figure img { width: 100%; aspect-ratio: 16 / 7.5; object-fit: cover; }
+  .ase-mk .about .reform img { aspect-ratio: auto; width: auto; max-height: 420px; margin: 0 auto; }
+  .ase-mk .about strong { font-weight: 600; }
+
+  /* Banners */
+  .ase-mk .banner { position: relative; margin-top: 56px; color: #fff; text-align: center;
+    background: #444 center / cover no-repeat; }
+  .ase-mk .banner::before { content: ""; position: absolute; inset: 0; background: rgba(0,0,0,.42); }
+  .ase-mk .banner .inner { position: relative; max-width: 820px; margin: 0 auto;
+    padding: clamp(64px, 11vw, 130px) 20px; }
+  .ase-mk .banner h3 { font-family: "Montserrat", sans-serif; font-weight: 700; margin: 0 0 14px;
+    font-size: clamp(30px, 5vw, 52px); letter-spacing: .03em; text-transform: uppercase; }
+  .ase-mk .banner p { margin: 0 auto 24px; font-size: 14px; max-width: 720px; }
+  .ase-mk .btn { display: inline-block; border: 1px solid #fff; padding: 8px 26px; font-size: 12px;
+    font-family: "Montserrat", sans-serif; letter-spacing: .1em; text-decoration: none; transition: .2s; }
+  .ase-mk .btn:hover { background: #fff; color: var(--ink); }
+
+  /* Category cards */
+  .ase-mk .cats { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 240px));
+    gap: 16px; padding: 28px 20px 0; max-width: 960px; margin: 0 auto; }
+  .ase-mk .cat { display: block; text-decoration: none; border: 1px solid #eee; background: #fff;
+    transition: box-shadow .2s; }
+  .ase-mk .cat:hover { box-shadow: 0 4px 16px rgba(0,0,0,.08); }
+  .ase-mk .cat img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; background: #f2f2f2; }
+  .ase-mk .cat .txt { padding: 10px 12px 12px; font-family: "Montserrat", sans-serif; font-size: 11px; }
+  .ase-mk .cat .by { color: #999; }
+  .ase-mk .cat .row { display: flex; justify-content: space-between; font-weight: 500; margin-top: 2px; }
+
+  @media (max-width: 600px) {
+    .ase-mk { font-size: 14px; }
+    .ase-mk .about p { text-align: left; }
+    .ase-mk .about figure img { aspect-ratio: 4 / 3; }
+    .ase-mk .cats { grid-template-columns: 1fr 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="ase-mk">
+
+  <!-- ===== Header ===== -->
+  <div class="hero" style="background-image:url('img/hero.jpg')" role="img" aria-label="ASE living room"></div>
+  <div class="brand wrap">
+    <div class="logo"><img src="img/logo-ase.jpg" alt="ASE logo"></div>
+    <h1>ASE</h1>
+    <div class="meta">
+      <span>FURNISHINGS</span>
+      <span class="sep"></span>
+      <span class="social">
+        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M15 3h-2.5A3.5 3.5 0 0 0 9 6.5V9H7v3h2v9h3v-9h2.5l.5-3h-3V7a1 1 0 0 1 1-1h2z"/></svg></a>
+        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg></a>
+        <a href="#" aria-label="Website"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg></a>
+        <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2.5" y="5.5" width="19" height="13" rx="3.5"/><path d="M10 9.2v5.6l4.8-2.8z" fill="currentColor"/></svg></a>
+        <a href="#" aria-label="Share"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="M8.2 10.8l7.6-4.6M8.2 13.2l7.6 4.6"/></svg></a>
+      </span>
+    </div>
+    <div class="loc">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+      <b>Location:</b>&nbsp;Khlong San, Bangkok, Thailand
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- ===== About this supplier ===== -->
+  <section class="about wrap">
+    <h2>ABOUT THIS SUPPLIER</h2>
+    <p>บริษัท เอเซ่ จำกัด (ASE) คือผู้พัฒนาและผลิตเฟอร์นิเจอร์สัญชาติไทย เชี่ยวชาญด้านงานหุ้มบุ (Upholstery) การพัฒนาผลิตภัณฑ์ และงานสั่งผลิตทั้งสำหรับโรงแรม ร้านอาหาร สปา และบ้านที่อยู่อาศัย</p>
+
+    <figure><img src="img/craft-leather.jpg" alt="งานหนังและงานหุ้มบุของ ASE" loading="lazy"></figure>
+    <p>ด้วยประสบการณ์กว่า 30 ปีในการผลิตและส่งออกเฟอร์นิเจอร์ ไปยังประเทศญี่ปุ่น เกาหลี และยุโรป การร่วมงานกับดีไซเนอร์ไทยและนานาชาติอย่างยาวนานทำให้ ASE สั่งสมความเชี่ยวชาญ ตั้งแต่การออกแบบโครงสร้าง การเลือกใช้วัสดุ งานตัดเย็บและหุ้มบุที่ประณีต ไปจนถึงการลงรายละเอียดและการควบคุมคุณภาพในทุกขั้นตอนการผลิต</p>
+
+    <figure><img src="img/ase-living.jpg" alt="ASE Living" loading="lazy"></figure>
+    <p>ปัจจุบัน ASE ถ่ายทอดความเชี่ยวชาญผ่าน 4 กลุ่มบริการหลัก เพื่อตอบโจทย์ทุกมิติของงานดีไซน์:<br>
+      <strong>ASE Living</strong> — เฟอร์นิเจอร์พร้อมใช้งานสำหรับพื้นที่อยู่อาศัยที่เน้นฟังก์ชั่นและความประณีต</p>
+
+    <figure><img src="img/ase-projects.jpg" alt="ASE Projects" loading="lazy"></figure>
+    <p><strong>ASE Projects</strong> — การพัฒนาและผลิตเฟอร์นิเจอร์สั่งทำพิเศษ (Bespoke Furniture) สำหรับโครงการ Hospitality, Commercial และ Residential โดยทำงานอย่างใกล้ชิดร่วมกับสถาปนิก อินทีเรียดีไซเนอร์ และผู้พัฒนาโครงการ</p>
+
+    <figure><img src="img/ase-studio.jpg" alt="ASE Studio" loading="lazy"></figure>
+    <p><strong>ASE Studio</strong> — พาร์ทเนอร์ในการสรรค์สร้างชิ้นงาน ร่วมมือกับนักออกแบบ ศิลปิน และแบรนด์ เพื่อเปลี่ยนแนวคิดเชิงศิลปะและจินตนาการให้กลายเป็นชิ้นงานจริงที่ใช้งานได้ในชีวิตประจำวัน</p>
+
+    <figure class="reform"><img src="img/ase-reform.jpg" alt="ASE Reform" loading="lazy"></figure>
+    <p><strong>ASE Reform</strong> — การต่ออายุและเพิ่มคุณค่าให้กับเศษวัสดุและเฟอร์นิเจอร์ ผ่านการดีไซน์และพัฒนาให้กลับมามีชีวิตใหม่อย่างยั่งยืน</p>
+
+    <p>นอกจากนี้ ASE ยังเป็นผู้พัฒนาแบรนด์ Chaw Cher (ฌ เฌอ) แบรนด์เฟอร์นิเจอร์ที่ถ่ายทอดความชำนาญสั่งสม ออกมาเป็นชิ้นงานที่ตอบโจทย์ไลฟ์สไตล์การอยู่อาศัยในทุกๆ วัน</p>
+    <p>ตั้งแต่ไอเดียตั้งต้น การคัดสรรวัสดุ การทำต้นแบบ จนถึงการผลิตจริง ASE คือผู้ช่วยช่างฝีมือที่พร้อมเปลี่ยนทุกความฝันและความคิดสร้างสรรค์ ให้กลายเป็นเฟอร์นิเจอร์ที่ตอบโจทย์การใช้งานจริง โดยยังคงเจตนารมณ์และความงดงามของงานออกแบบไว้อย่างสมบูรณ์แบบ</p>
+  </section>
+
+  <!-- ===== Chaw Cher ===== -->
+  <section class="banner" style="background-image:url('img/chawcher-banner.jpg')">
+    <div class="inner">
+      <h3>Chaw Cher</h3>
+      <p>Chaw Cher (ฌ เฌอ) แบรนด์เฟอร์นิเจอร์จาก ASE ที่ถ่ายทอดความชำนาญด้านงานหุ้มบุที่สั่งสมมากว่า 30 ปี ออกมาเป็นชิ้นงานที่ตอบโจทย์ไลฟ์สไตล์การอยู่อาศัยในทุกๆ วัน</p>
+      <a class="btn" href="https://thelist.group/metropolis/brand/chaw-cher--0943/">Read More</a>
+    </div>
+  </section>
+
+  <div class="cats">
+    <a class="cat" href="https://thelist.group/metropolis/brand/chaw-cher--0943/">
+      <img src="img/cat-sofa.jpg" alt="Sofa" loading="lazy">
+      <div class="txt"><div class="by">Chaw Cher</div><div class="row"><span>Sofa</span><span>(5)</span></div></div>
+    </a>
+    <a class="cat" href="https://thelist.group/metropolis/brand/chaw-cher--0943/">
+      <img src="img/cat-armchair.jpg" alt="Armchair and Loungechair" loading="lazy">
+      <div class="txt"><div class="by">Chaw Cher</div><div class="row"><span>Armchair and Loungechair</span><span>(4)</span></div></div>
+    </a>
+  </div>
+
+  <!-- ===== Bespoke Furniture ===== -->
+  <section class="banner" style="background-image:url('img/bespoke-banner.jpg')">
+    <div class="inner">
+      <h3>Bespoke Furniture</h3>
+      <p>นอกจากสินค้าแบรนด์ตัวเอง ASE รับงานสั่งผลิตตามแบบสำหรับโครงการโดยเฉพาะ ตั้งแต่การปรับขนาดและวัสดุจากรุ่นที่มีอยู่ ไปจนถึงขึ้นแบบใหม่ทั้งชิ้นจากแบบของสถาปนิกหรือนักออกแบบภายใน</p>
+      <a class="btn" href="../bespoke/">Read More</a>
+    </div>
+  </section>
+
+</div>
+</body>
+</html>
